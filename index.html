@@ -1,0 +1,218 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nikki - Ecommerce website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+     
+    </style>
+  </head>
+  <body>
+    <!----NavBar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark"  data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"><img src="assests/img/nikki-beach-logo-vector.png" alt="logo" width="70px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/products.html">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/AboutUs.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/ContactUs.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/orders.html">Orders</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <div class="cart-container" style="margin-left:20px;">
+              <button class="btn btn-outline-success" onclick="displayCart()">
+                <i class="fa fa-shopping-cart" style="font-size:25px;"></i>
+                <div class="CartCount" id="CartCount">0</div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+       
+      <!----Slider-->
+      <div id="carouselExample" class="carousel slide my-5">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assests/img/Slide1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assests/img/Slide2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assests/img/Slide3.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assests/img/Slide4.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assests/img/Slide5.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assests/img/Slide6.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assests/img/Slide7.jpeg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!--Shop by category-->
+      <div class="Container">
+        <h2>Shop By Category</h2>
+        <div class="Card">
+            <h3>Shirts</h3>
+            <a href="products.html#Shirts"><img src="assests/img/Shop by Category/shirt.webp" alt="Shirts" width="50px"></a>
+        </div>
+        <div class="Card">
+            <h3>Jeans</h3>
+            <a href="products.html#Jeans"><img src="assests/img/Shop by Category/jeans.jpeg" alt="Pants" width="50px"></a>
+        </div>
+        <div class="Card">
+            <h3>Watches</h3>
+            <a href="products.html#Watches"><img src="assests/img/Shop by Category/watches.jpeg" alt="Accessories" width="50px"></a>
+        </div>
+        <div class="Card">
+          <a href="products.html#Shoes/">
+            <h3>Shoes</h3>
+            <img src="assests/img/Shop by Category/shoes.jpg" alt="Shoes" width="50px">
+          </a>
+        </div>
+    </div>
+
+    <!--Features -->
+    <section class="features">
+        <div class="container">
+            <h2>Our Features</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <h3>Wide Range of Products</h3>
+                    <p>Discover a vast selection of products across various categories to meet all your needs.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Secure Payments</h3>
+                    <p>Enjoy safe and secure transactions with our advanced payment gateway.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Fast Delivery</h3>
+                    <p>Get your orders delivered quickly with our reliable and speedy shipping services.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>24/7 Customer Support</h3>
+                    <p>Our dedicated support team is available around the clock to assist you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--Latest Products-->
+  <div class="container">
+    <h1 class="container-header">Latest Products</h1>
+    <div id="products" class="products my-3">
+        <div id="latest-Product-list" class="product-category">
+           
+        </div>
+    </div>
+</div>
+  
+   <!---Cart Display-->
+   <div class="container cart" id="CartDisplay" style="display: none;">
+    <button type="button" class="close-btn" aria-label="Close" onclick="displayCart()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h3>Cart</h3>
+    <div id="cartItems"></div>
+    <p>Total items: <span id="CartCounting">0</span></p>
+    <p>Grand Total: <span id="GrandTotal">0.00</span></p>
+    <button class="btn btn-primary" onclick="CheckItOut()">Check Out!</button>
+</div>
+   <!-- Oder Cart -->
+<div class="container cart CheckItOut" id="CheckItOut" style="display: none;">
+  <div class="container">
+    <button class="btn btn-primary" id="CheckItOutBackBtn" onclick="CheckItOut()"><</button>
+    <button class="btn btn-danger" id="CheckItOutClose" onclick="CheckItOut()" style="float: right;">x</button>
+      <h2 class="container">Check It Out!</h2>
+      <h4>Order Summary</h4>
+      <div class="order-summary" id="order-summary">
+          
+      </div>
+
+      <h4>Shipping Information</h4>
+      <div class="shipping-form">
+          
+              
+              <label for="name">Full Name</label>
+              <input type="text" id="ShippingName" name="name" required>
+              
+              <label for="address">Address</label>
+              <input type="text" id="address" name="address" required>
+              
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" required>
+              
+              <label for="state">State</label>
+              <input type="text" id="state" name="state" required>
+              
+              <label for="zip">Zip Code</label>
+              <input type="text" id="zip" name="zip" required>
+              
+              <label for="country">Country</label>
+              <input type="text" id="country" name="country" required>
+              
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required>
+               
+              <button type="submit" class="submit-btn" onclick="ShippingForm()">Submit</button>
+          
+      </div>
+  </div>
+</div>
+
+
+    <!--FOOTER-->
+        <footer class="py-3">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3" style="color: aliceblue;">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+          </ul>
+          <p class="text-center text-muted">© 2022 Company, Inc</p>
+        </footer>
+
+      <script src="main.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      
+    </body>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        .details-card {
+            width: 80%;
+            margin: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .description-container {
+            position: relative;
+        }
+
+        .main-description h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-category {
+            font-size: 1rem;
+            color: #888;
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        .product-rating {
+            font-size: 1.2rem;
+            color: #ffa500;
+        }
+
+        .add-inputs,
+        .add-inputs button {
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 2px;
+        }
+
+        .add-inputs button {
+            border-radius: 0;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .product-description {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .social-list {
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        .social-list li {
+            margin-right: 12px;
+        }
+
+        .social-list li a {
+            color: black;
+            font-size: 2rem;
+        }
+
+        .related-products {
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        .related-products-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .related-product-cards {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .related-product-card {
+            width: 48%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            
+        }
+
+        .related-product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .related-product-info {
+            padding: 15px;
+        }
+
+        .related-product-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .related-product-price {
+            font-size: 1.4rem;
+            color: #333;
+        }
+
+    </style>
+    <link rel="stylesheet" href="/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+ <!-- NavBar -->
+ <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img src="assests/img/nikki-beach-logo-vector.png" alt="logo" width="70px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/products.html">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/AboutUs.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/ContactUs.htm">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="/orders.html">Orders</a>
+                </li>
+            </ul>
+            <div class="cart-container" style="margin-left: 20px;">
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Main Card-->
+    <div class="container my-5">
+        <div class="card details-card p-0">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <img class="img-fluid details-img container" src="" alt="itemImage" id="ImageId">
+                </div>
+                <div class="col-md-6 col-sm-12 description-container p-5">
+                    <div class="main-description">
+                        <h3 id="MainCardTitle"></h3>
+                        <hr>
+                        <p class="product-price" id="MainCardPrice"></p>
+                        <p class="product-rating">
+                            &#9733; &#9733; &#9733; &#9733; &#9734; (4.0)
+                        </p>
+                            <button name="add_to_cart" class="btn btn-primary btn-lg" id="AddToCartButtom-MainCard">Add to cart</button>
+                        <div style="clear:both"></div>
+                        <hr>
+                        <p class="product-title mt-4 mb-1">About this product</p>
+                        <p class="product-description mb-4" id="MainCardDescription">
+                           
+                        </p>
+                        <hr>
+                        <p class="product-title mt-4 mb-1">Share this product</p>
+                        <ul class="social-list">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related-products" id="related-products">
+            <p class="related-products-title">Related Products</p>
+            <div class="related-product-cards" id="related-product-cards" style="
+            position: relative;
+            display: ruby;
+        ">
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
